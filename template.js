@@ -11,6 +11,7 @@ exports.template = function(grunt, init, done) {
     var prompts = [
         init.prompt("name"),
         init.prompt("description"),
+        init.prompt("version"),
         init.prompt("author_name"),
         init.prompt("author_email"),
         init.prompt("datasource", "CountyData_SQL")
