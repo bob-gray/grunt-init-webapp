@@ -1,6 +1,6 @@
 {
-    "name": "<%= name %>",
-    "version": "<%= version %>",
+    "name": "{% name %}",
+    "version": "{% version %}",
     "main": "index.cfm",
     "dependencies": {
         "requirejs": "~2.1.10",

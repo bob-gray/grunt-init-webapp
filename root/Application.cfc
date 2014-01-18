@@ -1,9 +1,9 @@
 <cfcomponent>
     <cfset variables.root = getDirectoryFromPath(getCurrentTemplatePath()) />
-    <cfset this.name = left("<%= name %>", hash(root), 64) />
+    <cfset this.name = left("{% name %}", hash(root), 64) />
     <cfset this.mappings["/root"] = root />
     <cfset this.mappings["/cfc"] = root &"/cfc" />
-    <cfset this.datasource = "<%= datasource %>" />
+    <cfset this.datasource = "{% datasource %}" />
 
     <cffunction name="onApplicationStart" access="public" returnType="boolean">
 
@@ -23,9 +23,9 @@
  
         <cfmail
             type="html"
-            to="<%= author_email =>"
-            from="<%= author_email =>"
-            subject="<%= name => Error">
+            to="{% author_email %}"
+            from="{% author_email %}"
+            subject="{% name %} Error">
             
             <cfif isDefined("request.user")>
                 <cfdump label="user" var="#request.user#" />
